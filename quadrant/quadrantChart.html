@@ -1,5 +1,6 @@
 <html>
 	<head>
+        <h1>Quadrant Chart</h1>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 		<script type="text/javascript" src="scripts/raphael.min.js"></script>
 		<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
@@ -60,14 +61,10 @@
 	</head>
 
 	<body style="background:#fff" ng-app>
-		<div id="quadChart" style="position:relative;left:10%;width:50%;top:10%;height:600px"></div>
+		<div id="quadChart" style="position:relative;width:50%;top:10%;height:70%"></div>
 
 		<script type="text/javascript">
-		var dat = [];
-		for(var i=50; i--; dat.push({X: Math.random() * 200 - 100, Y: Math.random() * 200 - 100, Neighborhood: -1, Serial: '123123', Notes: 'asdfasdfasdf'}));
-
 			var chartKey = [
-
 				{
 					title: 'low publication \n low citation',
 					color: '#d99a00'
@@ -94,11 +91,11 @@
 					},
 					x: {
 						title: '1st Author Paper Count(log)',
-						tickInterval: 11
+						tickInterval: 9
 					},
 					y: {
 						title: '1st Author Citation Count(-log)',
-						tickInterval: 11
+						tickInterval: 9
 					}
 				}, 
 				quadrants: {
@@ -123,10 +120,10 @@
 						]
 					},
 					title: [
-						'123',
-						'Retain',
-						'Replace',
-						'Retire'
+						'',
+						'',
+						'',
+						''
 					]
 				},
 				key: chartKey,

@@ -64,7 +64,7 @@ var QuadView = function(id, config, dataSpace, cam){
 			var within = null;
 			quadrants[i].attr('fill', config.quadrants.colors.background[i])
 			            .attr('stroke', '#ececfb')
-			            .attr('stroke-width', 5)
+		     			.attr('stroke-width', '3')
 			            .click(goHome);
 			// 0  |  1
 			//---------

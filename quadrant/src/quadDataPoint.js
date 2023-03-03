@@ -85,7 +85,7 @@ var QuadDataPoint = function(point, paper, quadrants, cam){
 
 			link.underline = info.peek();
 
-			info.push(paper.text(x + 2, y + 10, 'firstPaperCount     ' + Math.ceil(point.X))
+			info.push(paper.text(x + 2, y + 10, 'Paper Count: ' + Math.ceil(Math.exp(point.X)))
 			             .attr('fill', '#fff')
              		     .attr('font-family', QUAD_FONT)
 			             .attr('text-anchor', 'start')
@@ -94,7 +94,7 @@ var QuadDataPoint = function(point, paper, quadrants, cam){
 			             .transform('M' + s + ',0, 0,' + s + ',' + point.X + ',' + point.Y)
 			);
 
-			info.push(paper.text(x + 2, y + 15, 'firstCitationCount    ' + Math.ceil(point.Y))
+			info.push(paper.text(x + 2, y + 15, 'Citation Count: ' + Math.ceil(Math.exp(-point.Y)))
 			             .attr('fill', '#fff')
              		     .attr('font-family', QUAD_FONT)
 			             .attr('text-anchor', 'start')
@@ -136,7 +136,7 @@ var QuadDataPoint = function(point, paper, quadrants, cam){
 		y: point.NormY * paper.height
 	};
 
-	var element = paper.circle(point.X.toFixed(2), point.Y.toFixed(2), 6 / cam.baseZoom);
+	var element = paper.circle(point.X.toFixed(2), point.Y.toFixed(2), 2 / cam.baseZoom);
 
 	element.attr('fill', quadrants.colors.dataFill[quadIndex]).attr('stroke-width', 0)
 	element.click(focus);

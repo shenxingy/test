@@ -16,8 +16,7 @@ var QuadBackground = function(id, config){
 		var point = paper.circle(position.x, position.y, 2);
 
 		point.attr('fill', color)
-		     .attr('stroke', '#ececfb')
-		     .attr('stroke-width', '3')
+		     .attr('stroke-width', '0')
 		     .attr('r', 6);
 	
 		return point;
@@ -34,7 +33,7 @@ var QuadBackground = function(id, config){
 
 		// y axis title   
 		paper.text(30, hh - 64, config.axes.y.title)
-			.attr('fill', '#a1c800')
+			.attr('fill', '#000')
 			.attr('font-size', 20)
 			.attr('font-family', QUAD_FONT)
 			.attr('font-weight', 'bold')
@@ -42,7 +41,7 @@ var QuadBackground = function(id, config){
 
 		// x axis title
 		var xTitle = paper.text(hw - 42, parentHeight() - 30, config.axes.x.title)
-			.attr('fill', '#a1c800')
+			.attr('fill', '#000')
 			.attr('font-family', QUAD_FONT)
 			.attr('font-weight', 'bold')
 			.attr('font-size', 20);
